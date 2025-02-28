@@ -146,6 +146,57 @@ class ImpuestosComprasTest(unittest.TestCase):
         resultado = BuyLogic.calcular_compra(valor_compra,valor_iva,valor_ic,impuesto_licor,impuesto_bolsa)
 
         self.assertEqual(experado,resultado,2)
+    
+    def test_valor_compra_cero(self):
+        valor_compra=0
+        valor_iva=19
+        valor_ic=0
+        impuesto_licor=0
+        impuesto_bolsa="no"
+
+        with self.assertRaises(BuyLogic.ErrorValorCompra):
+            resultado = BuyLogic.calcular_compra(valor_compra,valor_iva,valor_ic,impuesto_licor,impuesto_bolsa)
+
+    def test_valor_negativo_IVA(self):
+        valor_compra=78000
+        valor_iva=-12
+        valor_ic=0
+        impuesto_licor=0
+        impuesto_bolsa="si"
+
+        with self.assertRaises(BuyLogic.ErrorValorIVA):
+            resultado = BuyLogic.calcular_compra(valor_compra,valor_iva,valor_ic,impuesto_licor,impuesto_bolsa)
+
+    def test_valor_negativo_IC(self):
+        valor_compra=65000
+        valor_iva=19
+        valor_ic=-5
+        impuesto_licor=0
+        impuesto_bolsa="no"
+
+        with self.assertRaises(BuyLogic.ErrorValorIC):
+            resultado = BuyLogic.calcular_compra(valor_compra,valor_iva,valor_ic,impuesto_licor,impuesto_bolsa)
+
+    def test_valor_negativo_licor(self):
+        valor_compra=130000
+        valor_iva=19
+        valor_ic=0
+        impuesto_licor=-6
+        impuesto_bolsa="si"
+
+        with self.assertRaises(BuyLogic.ErrorImpuestoLicor):
+            resultado = BuyLogic.calcular_compra(valor_compra,valor_iva,valor_ic,impuesto_licor,impuesto_bolsa)
+
+    def test_valor_parametro_bolsa(self):
+        valor_compra=23380
+        valor_iva=5
+        valor_ic=5
+        impuesto_licor=0
+        impuesto_bolsa="None"
+
+        with self.assertRaises(BuyLogic.ErrorParametroBolsa):
+            resultado = BuyLogic.calcular_compra(valor_compra,valor_iva,valor_ic,impuesto_licor,impuesto_bolsa)
+
 
 
 if __name__ == "__main__":
