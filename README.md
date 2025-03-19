@@ -26,7 +26,7 @@ Este proyecto es una calculadora de impuestos de compras que, al ingresar cierto
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/SantiResFonn/Codigo_limpio_2025.git
+   gh repo clone SantiResFonn/Codigo_limpio_2025
    ```
 
 2. Navega a la carpeta raíz del proyecto:
@@ -38,7 +38,7 @@ Este proyecto es una calculadora de impuestos de compras que, al ingresar cierto
 3. Ejecuta el programa desde la línea de comandos:
 
    ```bash
-   python src/Console/CreditCardConsole.py
+   python src/view/console/TaxtesCalculationConsole.py
    ```
 
 ## ¿Cómo está hecho?
@@ -46,8 +46,8 @@ Este proyecto es una calculadora de impuestos de compras que, al ingresar cierto
 El proyecto sigue una arquitectura modular y está organizado de la siguiente manera:
 
 - **Carpeta `src`**: Contiene el código fuente de la lógica de la aplicación, estructurado en subcarpetas por cada capa de la aplicación.
-  - **`src/Console`**: Incluye la interfaz de consola para interactuar con la calculadora.
-  - **`src/Logic`**: Contiene la lógica de negocio para el cálculo de impuestos.
+  - **`src/view/console`**: Incluye la interfaz de consola para interactuar con la calculadora.
+  - **`src/model`**: Contiene la lógica de negocio para el cálculo de impuestos.
 
 - **Carpeta `tests`**: Contiene las pruebas unitarias para asegurar el correcto funcionamiento de la aplicación.
 
@@ -65,7 +65,7 @@ Al introducir estos datos, se totalizara el valor de la compra.
 Para ejecutar las pruebas unitarias desde la carpeta raíz, utiliza el siguiente comando:
 
 ```bash
-python tests/CreditCardTests.py
+python tests/TaxesTest.py
 ```
 
 Para que las pruebas se ejecuten correctamente desde la carpeta raíz, asegúrate de indicar la ruta de búsqueda donde se encuentran los módulos, añadiendo las siguientes líneas al inicio del módulo de pruebas:
