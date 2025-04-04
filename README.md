@@ -2,7 +2,12 @@
 
 # Calculadora de Impuestos de Compras
 
-## Autores
+## Editores:
+
+- Valery Monsalve 
+- Santiago Alcaraz
+
+## Autor
 
 - Santiago Restrepo Fonnegra
 
