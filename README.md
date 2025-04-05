@@ -79,4 +79,25 @@ Para que las pruebas se ejecuten correctamente desde la carpeta raíz, asegúrat
 import sys
 sys.path.append("src")
 ```
+## ¿Cómo ejecuto la interfaz gráfica (GUI)?
 
+Este proyecto también cuenta con una interfaz gráfica hecha con Kivy, que permite interactuar con la calculadora de impuestos de forma visual.
+
+Prerequisitos:
+- Tener instalado Python 3.x
+- Instalar la librería Kivy, si no la tienes aún:
+
+```bash
+pip install kivy
+
+```
+Ejecución:
+
+- Desde la carpeta raíz del proyecto, ejecuta el siguiente archivo:
+
+```bash
+python GUI.py
+
+```
+
+- Aparecerá una ventana donde puedes introducir los datos de la compra y los impuestos correspondientes. Al presionar el botón "Calcular total", verás el valor total con todos los impuestos aplicados.
