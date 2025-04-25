@@ -1,10 +1,8 @@
-
-
 # Calculadora de Impuestos de Compras
 
 ## Editores:
 
-- Valery Monsalve 
+- Valery Monsalve
 - Santiago Alcaraz
 
 ## Autor
@@ -51,6 +49,7 @@ Este proyecto es una calculadora de impuestos de compras que, al ingresar cierto
 El proyecto sigue una arquitectura modular y está organizado de la siguiente manera:
 
 - **Carpeta `src`**: Contiene el código fuente de la lógica de la aplicación, estructurado en subcarpetas por cada capa de la aplicación.
+
   - **`src/view/console`**: Incluye la interfaz de consola para interactuar con la calculadora.
   - **`src/model`**: Contiene la lógica de negocio para el cálculo de impuestos.
 
@@ -61,11 +60,12 @@ Cada carpeta de código fuente incluye un archivo `__init__.py` para que Python 
 ## Uso
 
 Primero se debe introducir el valor de la compra.
+
 - Luego el programa preguntara por el porcentaje del impuesto de IVA que se aplica, a la fecha de este README es 19%, 5%, 0. Introducir numeros enteros, ya que el programa se encarga de pasarlos a porcentajes.
 - Luego preguntara si aplica el impuesto al consumo, como dicho anteriormente introducir solo enteros, los valores pueden ser hasta la creación de este README 4%, 8% y 0%
 - Luego preguntara si aplica impuesto al licor, introducir tambien un entero.
 - Luego preguntara si se le aplica el impuesto de bolsa, este valor es un "Si" o un "No", si es un si se aplicara al final, si es un no, no sumara nada al valor final
-Al introducir estos datos, se totalizara el valor de la compra.
+  Al introducir estos datos, se totalizara el valor de la compra.
 
 Para ejecutar las pruebas unitarias desde la carpeta raíz, utiliza el siguiente comando:
 
@@ -79,11 +79,13 @@ Para que las pruebas se ejecuten correctamente desde la carpeta raíz, asegúrat
 import sys
 sys.path.append("src")
 ```
+
 ## ¿Cómo ejecuto la interfaz gráfica (GUI)?
 
 Este proyecto también cuenta con una interfaz gráfica hecha con Kivy, que permite interactuar con la calculadora de impuestos de forma visual.
 
 Prerequisitos:
+
 - Tener instalado Python 3.x
 - Instalar la librería Kivy, si no la tienes aún:
 
@@ -91,6 +93,7 @@ Prerequisitos:
 pip install kivy
 
 ```
+
 Ejecución:
 
 - Desde la carpeta raíz del proyecto, ejecuta el siguiente archivo:
@@ -101,3 +104,23 @@ python GUI.py
 ```
 
 - Aparecerá una ventana donde puedes introducir los datos de la compra y los impuestos correspondientes. Al presionar el botón "Calcular total", verás el valor total con todos los impuestos aplicados.
+
+## 📦 Ejecutable
+
+Puedes descargar la última versión del ejecutable desde la carpeta [`dist/`](dist/main.exe).
+
+## 🚀 Cómo usarlo
+
+1. Descarga el archivo `main.exe`.
+2. Haz doble clic para ejecutarlo. _(No requiere instalar Python)_
+
+> ⚠️ Si Windows bloquea la app, haz clic derecho → Propiedades → "Desbloquear".
+
+## 🛠️ Construcción del ejecutable
+
+Este proyecto usa [PyInstaller](https://www.pyinstaller.org/) para empaquetar el archivo `main.py`.  
+Puedes generar el ejecutable con:
+
+```bash
+pyinstaller main.spec
+```
