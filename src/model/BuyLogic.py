@@ -13,6 +13,10 @@ class ErrorParametroBolsa(Exception):
 
 
 def calcular_total_compra(valor_compra: float, valor_iva: float, valor_impuesto_consumo: float, impuesto_licor: float, impuesto_bolsa: str):
+    valor_compra = float(valor_compra)
+    valor_iva = float(valor_iva)
+    valor_impuesto_consumo = float(valor_impuesto_consumo)
+    impuesto_licor = float(impuesto_licor)
     #Asignacion de entradas y cambio a porcentajes
     valor_impuesto_bolsa = 0
     valor_iva_porcentaje = valor_iva/100
